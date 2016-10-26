@@ -11,8 +11,8 @@ int main(int argc, string argv[])
        printf("Type  key.");
        return 1;
 }
-
-
+   // винести в функцію 
+	// вхідне слово це параметр, повернення булівська змінна
    string k = argv[1];
    int cn = strlen(k);
    for(int m = 0; m < cn; m++) 
@@ -49,4 +49,5 @@ int main(int argc, string argv[])
 
 
    printf("\n");
-   return 0;}
+   return 0;
+}
