@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 
-int main(int argc, string argv[])
+int main(int argc, string argv[])//оголошення масиву
 {
    if (argc != 2) 
    {
@@ -17,20 +17,22 @@ int main(int argc, string argv[])
    int cn = strlen(k);
    for(int m = 0; m < cn; m++) 
    {
-       if (!isalpha(k[m])) {
+       if (!isalpha(k[m])) 
+       {
            printf("Your symbols are non-alphabetical.");
            return 1;
 }
+
 }
 
 
    string ftxt = GetString();
-   if(ftxt == NULL) {
+   if(ftxt == NULL) 
+   {
        printf("Your text has a very big length.");
        return 1;
 }
-
-
+//функція шифрування
    for (int i = 0, n = 0; i < strlen(ftxt); i++) 
    {
 
@@ -43,7 +45,8 @@ int main(int argc, string argv[])
 
            if (isupper(ftxt[i]))
                printf("%c", ((((ftxt[i] - 'A') + ((toupper(k[n++%cn]))-'A')%26) % 26) + 'A'));
-} else
+} 
+	   else
            printf("%c", ftxt[i]);
 }
 
